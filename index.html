@@ -1,9 +1,147 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My First Web Page</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
+    <head>
+        <title>My-website</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: #1f1f1f;
+                /* background-color: #fff; */
+            }
+            #nav {
+                border-bottom: 1px solid #333537;
+            }
+            nav {
+                margin: 30px auto 0;
+                width: 90%;
+                display: flex;
+                align-items: center;
+            }
+            #searchbar {
+                display: inline-block;
+                width: 700px;
+                height: 50px;
+                border-radius: 25px;
+                background-color: #4d5156;
+                margin: 0 0 0 30px;
+            }
+            #search > input {
+                outline: none;
+                border: none;
+                background-color: transparent;
+                color: #e8eaed;
+                font-size: 16px;
+                width: 500px;
+                height: 50px;
+                margin: 0 0 0 15px;
+            }
+            #search::after {
+                display: inline-block;
+                content: "";
+                width: 1px;
+                height: 35px;
+                margin: 7.5px 0 0 5px;
+                background-color: rgba(248, 249, 250, 0.25);
+                vertical-align: top;
+            }
+            #nav > div {
+                margin: 25px 0 10px 50px;
+                color: #80868b;
+            }
+            #nav > div > span {
+                margin: 0 10px 0;
+                font-size: 13px;
+            }
+            #select {
+                color: #fff;
+            }
+            #select::before {
+                display: inline-block;
+                position: absolute;
+                content: "";
+                width: 23px;
+                height: 3px;
+                margin: 27px 0 0 0;
+                background-color: #fff;
+            }
+            #main {
+                width: 90%;
+                height: 50px;
+                margin: 0 auto;
+            }
+            #article {
+                margin: 30px 0 0;
+            }
+            #section2 {
+                margin: 15px 0 0;
+            }
+            #section2 > div {
+                display: inline-block;
+                background-color: #2c303d;
+                border-radius: 15px;
+                color: #fff;
+                height: 110px;
+                margin: 0 10px 0 0;
+            }
+            .title {
+                margin: 10px 0 0 10px;
+            }
+            .content {
+                margin: 50px 0 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <nav>
+                <svg style="width: 110px; height: 30px"><path fill="#fff" d="M38.9 15.51c0 4.26-3.32 7.39-7.4 7.39s-7.4-3.14-7.4-7.39c0-4.28 3.32-7.39 7.4-7.39s7.4 3.1 7.4 7.39zm-3.24 0c0-2.66-1.93-4.48-4.16-4.48-2.23 0-4.16 1.82-4.16 4.48 0 2.63 1.93 4.48 4.16 4.48 2.23 0 4.16-1.85 4.16-4.48zm-23.7 7.47C5.63 22.98.31 17.83.31 11.5S5.63.02 11.96.02c3.5 0 5.99 1.37 7.87 3.16L17.62 5.4c-1.34-1.26-3.16-2.24-5.66-2.24-4.62 0-8.23 3.72-8.23 8.34 0 4.62 3.61 8.34 8.23 8.34 3 0 4.7-1.2 5.79-2.3.9-.9 1.49-2.2 1.74-4.17H12v-3.14h10.52c.11.56.17 1.23.17 1.96 0 2.35-.64 5.49-2.72 7.56-2.02 2.11-4.59 3.23-8.01 3.23zm42.94-7.47c0 4.26-3.32 7.39-7.4 7.39s-7.4-3.14-7.4-7.39c0-4.28 3.32-7.39 7.4-7.39s7.4 3.1 7.4 7.39zm-3.24 0c0-2.66-1.93-4.48-4.16-4.48-2.23 0-4.16 1.82-4.16 4.48 0 2.63 1.93 4.48 4.16 4.48 2.23 0 4.16-1.85 4.16-4.48zM70 8.56v13.27c0 5.46-3.05 7.7-6.86 7.7-3.58 0-5.74-2.41-6.55-4.37l2.83-1.18c.5 1.2 1.74 2.63 3.72 2.63 2.44 0 3.78-1.51 3.78-4.34v-1.06h-.11c-.73.9-2.04 1.68-3.81 1.68-3.7 0-7-3.22-7-7.36 0-4.17 3.3-7.42 7-7.42 1.76 0 3.08.78 3.81 1.65h.11v-1.2H70zm-2.86 6.97c0-2.6-1.74-4.51-3.95-4.51-2.24 0-3.95 1.9-3.95 4.51 0 2.58 1.71 4.45 3.95 4.45 2.22.01 3.95-1.87 3.95-4.45zM75 1.17V22.9h-3V1.17h3zm12.5 16.77l2.48 1.68c-.8 1.2-2.73 3.28-6.06 3.28-4.13 0-7.22-3.25-7.22-7.39 0-4.4 3.11-7.39 6.86-7.39 3.78 0 5.62 3.05 6.23 4.7l.31.85-9.71 4.08c.74 1.48 1.9 2.24 3.53 2.24s2.76-.82 3.58-2.05zm-7.63-2.66l6.5-2.74c-.36-.92-1.43-1.57-2.7-1.57-1.62 0-3.88 1.46-3.8 4.31z"></path></svg>
+                <div id="searchbar">
+                    <div id="search" style="display: inline-block;">
+                        <input type="text" value="김현준" readonly>
+                        <svg style="width: 25px; height: 25px; vertical-align: top; margin: 12.5px 0 0"><path fill="#bfbfbf" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                    </div>
+                    <div style="display: inline-block; width: 20px; height: 20px; margin: 13px 0 0 100px; vertical-align: top;">
+                        <svg style="width: 100%; height: 100%"><path fill="#bfbfbf" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <span id="select">전체</span>
+                <span>이미지</span>
+                <span>뉴스</span>
+                <span>동영상</span>
+                <span>짧은 동영상</span>
+                <span>쇼핑</span>
+                <span>지도</span>
+                <span>더보기 <svg style="width: 20px; height: 15px"><path fill="#80868b" d="M7 10l5 5 5-5z"></path></svg></span>
+            </div>
+        </div>
+        <div id="main">
+            <div id="article">
+                <div id="section1">
+                    <p style="color: #fff; font-size: 28px; margin: 0;">김현준</p>
+                    <span style="color: #bfbfbf;">경북소프트웨어마이스터고등학교 재학생</span>
+                    <svg style="width: 20px; height: 20px; vertical-align: top; margin: -3px 0 0"><path fill="#fff" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                </div>
+                <div id="section2">
+                    <div style="width: 100px;">
+                        <p class="title">취미</p>
+                        <p class="content">독서, 프론트</p>
+                    </div>
+                    <div style="width: 100px;">
+                        <p class="title">좋아하는 것</p>
+                        <p class="content">프론트</p>
+                    </div>
+                    <div style="width: 110px;">
+                        <p class="title">꿈</p>
+                        <p class="content">풀스택 개발자</p>
+                    </div>
+                    <div style="width: 120px;">
+                        <p class="title">관심사</p>
+                        <p class="content">풀스택, 보안</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
